@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Authors>Miguel Roman</Authors>
+    <Company>Code Gardenet</Company>
+    <Product>Salesforce Client</Product>
+    <Description>alesforce SOAP API client for dotnet core</Description>
+    <Copyright>CodeGardener.Net © 2017</Copyright>
+    <PackageLicenseUrl>https://github.com/miguelerm/salesforce-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/miguelerm/salesforce-dotnet</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/miguelerm/salesforce-dotnet.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>salesforce, dotnetcore</PackageTags>
+    <PackageReleaseNotes />
+  </PropertyGroup>
+
+</Project>

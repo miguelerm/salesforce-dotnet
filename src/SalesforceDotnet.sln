@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeGardener.Salesforce", "CodeGardener.Salesforce\CodeGardener.Salesforce.csproj", "{532CE2F0-ECA6-48C5-9549-3A44EE7D762B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGardener.Salesforce.Tests", "CodeGardener.Salesforce.Tests\CodeGardener.Salesforce.Tests.csproj", "{A1240BDB-6763-4161-9E66-8633D4111086}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{532CE2F0-ECA6-48C5-9549-3A44EE7D762B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{532CE2F0-ECA6-48C5-9549-3A44EE7D762B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{532CE2F0-ECA6-48C5-9549-3A44EE7D762B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{532CE2F0-ECA6-48C5-9549-3A44EE7D762B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1240BDB-6763-4161-9E66-8633D4111086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1240BDB-6763-4161-9E66-8633D4111086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1240BDB-6763-4161-9E66-8633D4111086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1240BDB-6763-4161-9E66-8633D4111086}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
