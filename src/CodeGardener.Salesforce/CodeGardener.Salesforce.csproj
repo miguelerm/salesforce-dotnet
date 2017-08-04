@@ -6,7 +6,7 @@
     <Authors>Miguel Roman</Authors>
     <Company>Code Gardenet</Company>
     <Product>Salesforce Client</Product>
-    <Description>alesforce SOAP API client for dotnet core</Description>
+    <Description>Salesforce SOAP API client for dotnet core</Description>
     <Copyright>CodeGardener.Net © 2017</Copyright>
     <PackageLicenseUrl>https://github.com/miguelerm/salesforce-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/miguelerm/salesforce-dotnet</PackageProjectUrl>
