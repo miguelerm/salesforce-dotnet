@@ -14,6 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>salesforce, dotnetcore</PackageTags>
     <PackageReleaseNotes />
+    <PackageId>CodeGardener.Salesforce.DotNet</PackageId>
   </PropertyGroup>
 
 </Project>
