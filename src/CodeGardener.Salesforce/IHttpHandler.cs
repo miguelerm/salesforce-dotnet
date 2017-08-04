@@ -5,6 +5,6 @@ namespace CodeGardener.Salesforce
 {
     public interface IHttpHandler
     {
-        Task<HttpResponseMessage> PostAsync(string url, HttpContent message);
+        Task<HttpResponseMessage> PostAsync(string requestUri, HttpContent content);
     }
 }

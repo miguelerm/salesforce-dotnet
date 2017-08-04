@@ -18,6 +18,11 @@ namespace CodeGardener.Salesforce
             this.http = http;
         }
 
+        public SoapClient(HttpClient client) : this(new DefaultHttpHandler(client))
+        {
+
+        }
+
         public async Task LoginAsync(string username, string password, string token)
         {
             var content = GetLoginXmlContent(username, password + token);
