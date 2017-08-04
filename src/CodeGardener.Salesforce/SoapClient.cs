@@ -7,6 +7,7 @@ namespace CodeGardener.Salesforce
 {
     public class SoapClient
     {
+        private const string LoginUrl = "https://login.salesforce.com/services/Soap/c/40.0";
         private readonly IHttpHandler http;
 
         public string ServerUrl { get; private set; }
@@ -21,7 +22,7 @@ namespace CodeGardener.Salesforce
         {
             var content = GetLoginXmlContent(username, password + token);
 
-            var response = await http.PostAsync("", new StringContent(content, Encoding.UTF8, "application/xml"));
+            var response = await http.PostAsync(LoginUrl, new StringContent(content, Encoding.UTF8, "application/xml"));
 
             if (response.IsSuccessStatusCode)
             {
