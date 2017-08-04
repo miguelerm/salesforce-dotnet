@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="urn:enterprise.soap.sforce.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <soapenv:Body>
+        <loginResponse>
+            <result>
+                <metadataServerUrl>https://metadata-server-url</metadataServerUrl>
+                <passwordExpired>false</passwordExpired>
+                <sandbox>false</sandbox>
+                <serverUrl>https://server-url</serverUrl>
+                <sessionId>ThisIsTheSessionId</sessionId>
+                <userId>ThisIsTheUserId</userId>
+                <userInfo>
+                    <accessibilityMode>false</accessibilityMode>
+                    <chatterExternal>false</chatterExternal>
+                    <currencySymbol>Q</currencySymbol>
+                    <orgAttachmentFileSizeLimit>5242880</orgAttachmentFileSizeLimit>
+                    <orgDefaultCurrencyIsoCode>GTQ</orgDefaultCurrencyIsoCode>
+                    <orgDefaultCurrencyLocale>es</orgDefaultCurrencyLocale>
+                    <orgDisallowHtmlAttachments>false</orgDisallowHtmlAttachments>
+                    <orgHasPersonAccounts>false</orgHasPersonAccounts>
+                    <organizationId>ThisIsTheOrganizationId</organizationId>
+                    <organizationMultiCurrency>false</organizationMultiCurrency>
+                    <organizationName>This Is The Organization Name</organizationName>
+                    <profileId>ThisIdTheProfileId</profileId>
+                    <roleId xsi:nil="true"/>
+                    <sessionSecondsValid>7200</sessionSecondsValid>
+                    <userDefaultCurrencyIsoCode xsi:nil="true"/>
+                    <userEmail>user@email.com</userEmail>
+                    <userFullName>This is the user full name</userFullName>
+                    <userId>ThisIsTheUserId</userId>
+                    <userLanguage>es_GT</userLanguage>
+                    <userLocale>es</userLocale>
+                    <userName>user@email.con</userName>
+                    <userTimeZone>America/Guatemala_City</userTimeZone>
+                    <userType>Standard</userType>
+                    <userUiSkin>Theme3</userUiSkin>
+                </userInfo>
+            </result>
+        </loginResponse>
+    </soapenv:Body>
+</soapenv:Envelope>
