@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns="urn:enterprise.soap.sforce.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sf="urn:sobject.enterprise.soap.sforce.com">
+    <soapenv:Header>
+        <LimitInfoHeader>
+            <limitInfo>
+                <current>9</current>
+                <limit>15000</limit>
+                <type>API REQUESTS</type>
+            </limitInfo>
+        </LimitInfoHeader>
+    </soapenv:Header>
+    <soapenv:Body>
+        <queryResponse>
+            <result>
+                <done>true</done>
+                <queryLocator xsi:nil="true"/>
+                <records xsi:type="sf:User">
+                    <sf:Id>user-id</sf:Id>
+                    <sf:Email>user-email@email.com</sf:Email>
+                    <sf:FirstName>user-first-name</sf:FirstName>
+                    <sf:LastName>user-last-name</sf:LastName>
+                </records>
+                <size>1</size>
+            </result>
+        </queryResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -1,6 +1,9 @@
-﻿using System.Net.Http;
+﻿using CodeGardener.Salesforce.HttpContents;
+using System.Collections.Generic;
+using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System;
 
 namespace CodeGardener.Salesforce
 {
@@ -35,6 +38,27 @@ namespace CodeGardener.Salesforce
                 ServerUrl = result.ServerUrl;
                 SessionId = result.SessionId;
             }
+            else
+            {
+                throw new Exception($"HTTP Error: {response.StatusCode}");
+            }
+        }
+
+        public async Task<IEnumerable<T>> QueryAsync<T>(string queryString) where T : class, new()
+        {
+            var content = new QueryHttpContent(SessionId, queryString);
+
+            var response = await http.PostAsync(ServerUrl, content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var xml = await response.Content.ReadAsStringAsync();
+                return DeserializeQueryResponse<T>(xml);
+            }
+            else
+            {
+                throw new Exception($"HTTP Error: {response.StatusCode}");
+            }
         }
 
         private static LoginResponse DeserializeLoginResponse(string xmlContent)
@@ -49,6 +73,9 @@ namespace CodeGardener.Salesforce
             };
         }
 
-        
+        private IEnumerable<T> DeserializeQueryResponse<T>(string xml) where T : class, new()
+        {
+            return new T[] { };
+        }
     }
 }

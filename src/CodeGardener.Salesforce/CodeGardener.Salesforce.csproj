@@ -17,4 +17,8 @@
     <PackageId>CodeGardener.Salesforce.DotNet</PackageId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.7.99" />
+  </ItemGroup>
+
 </Project>

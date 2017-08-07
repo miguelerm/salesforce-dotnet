@@ -1,18 +1,15 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
-using System.Reflection;
 using Xunit;
-using System.IO;
-using System.Net;
-using System.Text;
+using CodeGardener.Salesforce.Tests.Responses;
 
 namespace CodeGardener.Salesforce.Tests.SoapClientTests
 {
     [Trait("SoapClient", "When Logged In")]
     public class WhenLoggedIn
     {
-        private LoggedInTestHttpHandler http;
-        private SoapClient client;
+        private readonly LoggedInTestHttpHandler http;
+        private readonly SoapClient client;
 
         public WhenLoggedIn()
         {
@@ -58,19 +55,7 @@ namespace CodeGardener.Salesforce.Tests.SoapClientTests
                 PostCount++;
                 LastPortUrl = url;
                 LastPost = await content.ReadAsStringAsync();
-                return new HttpResponseMessage(HttpStatusCode.OK) {
-                    Content = new StringContent(GetTestResponseContent(), Encoding.UTF8, "application/xml")
-                };
-            }
-
-            private static string GetTestResponseContent()
-            {
-                var assembly = typeof(LoggedInTestHttpHandler).GetTypeInfo().Assembly;
-                using (var stream = assembly.GetManifestResourceStream("CodeGardener.Salesforce.Tests.SoapClientTests.WhenLoggedInTestResponse.xml"))
-                using (var reader = new StreamReader(stream))
-                {
-                    return reader.ReadToEnd();
-                }
+                return new LoginSuccessResponse();
             }
         }
     }

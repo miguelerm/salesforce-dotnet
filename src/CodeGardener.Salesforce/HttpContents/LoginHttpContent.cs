@@ -1,7 +1,7 @@
 ﻿using System.Net.Http;
 using System.Text;
 
-namespace CodeGardener.Salesforce
+namespace CodeGardener.Salesforce.HttpContents
 {
     sealed class LoginHttpContent : StringContent
     {
