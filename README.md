@@ -17,8 +17,9 @@ var username = "";
 var password = "";
 var token = "";
 var contact = default(Contact);
+var httpClient = new HttpClient();
 
-using (var client = new SoapClient()) {
+using (var client = new SoapClient(httpClient)) {
     await client.LoginAsync(username, password, token);
     contact = await client.QueryAsync<Contact>($"SELECT Id, Name, AccountId FROM Contact WHERE Id = '{contactId}'").SingleOrDefault();
 }
