@@ -15,6 +15,7 @@
     <PackageTags>salesforce, dotnetcore</PackageTags>
     <PackageReleaseNotes />
     <PackageId>CodeGardener.Salesforce.DotNet</PackageId>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
