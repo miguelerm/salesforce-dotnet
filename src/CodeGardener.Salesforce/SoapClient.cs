@@ -4,6 +4,10 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System;
+using System.Xml.Linq;
+using System.IO;
+using System.Linq;
+using System.Reflection;
 
 namespace CodeGardener.Salesforce
 {
@@ -75,7 +79,31 @@ namespace CodeGardener.Salesforce
 
         private IEnumerable<T> DeserializeQueryResponse<T>(string xml) where T : class, new()
         {
-            return new T[] { };
+            var doc = XDocument.Load(new StringReader(xml));
+            var ns = XNamespace.Get("urn:enterprise.soap.sforce.com");
+            var pns = XNamespace.Get("urn:sobject.enterprise.soap.sforce.com");
+            var records = doc.Descendants(ns + "records");
+            var result = new List<T>();
+
+            var properties = typeof(T).GetTypeInfo().DeclaredProperties;
+
+            foreach (var record in records)
+            {
+                var obj = new T();
+                foreach (var prop in properties)
+                {
+                    var fullXmlPropName = pns + prop.Name;
+                    var xmlElement = record.Descendants(fullXmlPropName).FirstOrDefault();
+                    if (xmlElement != null && xmlElement.Value != null)
+                    {
+                        prop.SetValue(obj, xmlElement.Value);
+                    }
+                }
+
+                result.Add(obj);
+            }
+
+            return result;
         }
     }
 }
