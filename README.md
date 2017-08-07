@@ -1,5 +1,5 @@
-# salesforce-dotnet
-Salesforce SOAP API client for dotnet core
+# Salesforce.Net
+A simple Salesforce SOAP API client compatible with .Net Core
 
 ## Setup
 
